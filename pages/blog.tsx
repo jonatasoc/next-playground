@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import { Fragment } from "react";
 
+interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
 interface Props {
-  posts: {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
-  }[];
+  posts: Post[];
 }
 
 const Blog: NextPage<Props> = ({ posts }) => {
